@@ -51,4 +51,4 @@ tar -xvf qsim_arm_images.tar
 # run simple example
 echo "Running the simple example..."
 cd arm-examples/
-make && ./simple
+make && ./cachesim
