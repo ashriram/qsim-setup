@@ -32,24 +32,29 @@ mkdir -p lib include build
 make -j4
 # copy header files to include directory
 cp *.h include/
+
 # build qemu
+echo "\nConfiguring and building qemu...\n"
 cd build
 ../arm-build.sh
 
 # copy built libraries
-cp arm-softmmu/qemu-system-arm lib/libqemu-qsim.so
 cd ..
+cp build/arm-softmmu/qemu-system-arm lib/libqemu-qsim.so
 cp libqsim.so lib/
+cd ..
 
 # get qemu images
-echo "Downloading arm QEMU images..."
+echo "\nDownloading arm QEMU images..."
 # wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
-wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0
+wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0 -O arm_images.tar.bz2
 # cp ~/devops/Dropbox/qsim-ARM/arm_images.tar.bz2 .
+
+echo "\nUncompresssing images. This might take a while..."
 tar -xjvf arm_images.tar.bz2
-tar -xvf arm_images.tar
+# tar -xvf arm_images.tar
 
 # run simple example
-echo "Running the simple example..."
+echo "Running the cache simulator example..."
 cd arm-examples/
 make && ./cachesim
