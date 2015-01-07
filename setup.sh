@@ -56,5 +56,5 @@ tar -xjvf arm_images.tar.bz2
 
 # run simple example
 echo "Running the cache simulator example..."
-cd arm-examples/
+cd qsim/arm-examples/
 make && ./cachesim
