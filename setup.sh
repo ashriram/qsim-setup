@@ -43,7 +43,8 @@ cp libqsim.so lib/
 
 # get qemu images
 echo "Downloading arm QEMU images..."
-wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
+# wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
+wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0
 # cp ~/devops/Dropbox/qsim-ARM/qsim_arm_images.tar.bz2 .
 tar -xjvf qsim_arm_images.tar.bz2
 tar -xvf qsim_arm_images.tar
