@@ -16,6 +16,7 @@ git checkout -b armport origin/armport
 # set the QSIM environment variable
 echo "Setting QSIM environment variable..."
 export QSIM_PREFIX=`pwd`
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QSIM_PREFIX/lib
 
 # clone qemu
 echo "Cloning qemu..."
