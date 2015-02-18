@@ -22,8 +22,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QSIM_PREFIX/lib
 echo "Cloning qemu..."
 git clone https://github.com/pranith/qemu
 cd qemu
-# use branch callbacks
-git checkout -b callbacks origin/callbacks
+# use branch armport
+git checkout -b armport origin/armport
 cd ..
 
 # create lib, include, build directories
