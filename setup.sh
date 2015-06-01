@@ -45,6 +45,12 @@ cp build/arm-softmmu/qemu-system-arm lib/libqemu-qsim.so
 cp libqsim.so lib/
 cd ..
 
+# capstone disassembler
+git clone https://github.com/pranith/capstone
+git checkout -b armport origin/armport
+./make.sh
+./copy.sh
+
 # get qemu images
 echo "\nDownloading arm QEMU images..."
 # wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
