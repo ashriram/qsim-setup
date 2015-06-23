@@ -54,7 +54,8 @@ git checkout -b armport origin/armport
 # get qemu images
 echo "\nDownloading arm QEMU images..."
 # wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
-wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0 -O arm_images.tar.bz2
+# wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0 -O arm_images.tar.bz2
+wget https://www.dropbox.com/s/u7mk3x37tg65vwb/arm64_images.tar.bz2?dl=0 -O arm64_images.tar.bz2
 # cp ~/devops/Dropbox/qsim-ARM/arm_images.tar.bz2 .
 
 echo "\nUncompresssing images. This might take a while..."
