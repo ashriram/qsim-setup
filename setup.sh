@@ -37,7 +37,7 @@ cp *.h include/
 # build qemu
 echo "\nConfiguring and building qemu...\n"
 cd build
-../arm-build.sh
+../arm64-build.sh
 
 # copy built libraries
 cd ..
@@ -47,9 +47,11 @@ cd ..
 
 # capstone disassembler
 git clone https://github.com/pranith/capstone
+cd capstone
 git checkout -b armport origin/armport
 ./make.sh
 ./copy.sh
+cd ..
 
 # get qemu images
 echo "\nDownloading arm QEMU images..."
