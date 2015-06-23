@@ -9,3 +9,11 @@ setup.sh in the folder where you want to setup the build.
 
 This has been tested on Ubuntu 14.04. Patches for other distributions are
 welcome.
+
+Please install the build dependencies for qemu as follows:
+
+$ sudo apt-get build-dep qemu
+
+Also install the following libraries:
+
+$ sudo apt-get install libpixman-1-dev libfdt-dev
