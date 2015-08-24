@@ -70,7 +70,7 @@ wget -c https://www.dropbox.com/s/2jplu61410tfime/arm64_images.tar.xz?dl=0 -O ar
 # cp ~/devops/Dropbox/qsim-ARM/arm_images.tar.bz2 .
 
 echo "\nUncompresssing images. This might take a while..."
-tar -xjvf arm64_images.tar.xz
+tar -xf arm64_images.tar.xz
 # tar -xvf arm_images.tar
 
 # run simple example
