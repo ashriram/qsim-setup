@@ -7,6 +7,8 @@
 # Date: 01/03/2015
 
 # clone qsim
+sudo apt-get build-dep qemu
+echo "sudo apt-get -y build-dep qemu"
 echo "Cloning qsim..."
 git clone https://github.com/pranith/qsim
 cd qsim
