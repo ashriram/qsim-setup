@@ -56,7 +56,7 @@ git clone https://github.com/pranith/capstone
 cd capstone
 git checkout -b arm64_reg_access origin/armport
 ./make.sh
-cp include/capston/*.h $QSIM_PREFIX/include/
+cp include/capstone/*.h $QSIM_PREFIX/include/
 cp libcapstone.so $QSIM_PREFIX/lib/
 cd ..
 
