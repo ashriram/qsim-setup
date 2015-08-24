@@ -47,7 +47,8 @@ cd build
 
 # copy built libraries
 cd ..
-cp build/arm-softmmu/qemu-system-arm lib/libqemu-qsim.so
+#cp build/arm-softmmu/qemu-system-arm lib/libqemu-qsim.so
+cp build/aarch64-softmmu/qemu-system-aarch64 lib/libqemu-qsim.so
 cp libqsim.so lib/
 cd ..
 
