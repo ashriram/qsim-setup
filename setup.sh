@@ -17,6 +17,10 @@ git checkout -b armport origin/armport
 echo "Setting QSIM environment variable..."
 export QSIM_PREFIX=`pwd`
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QSIM_PREFIX/lib
+echo "Add the following lines to your bashrc"
+echo "export QSIM_PREFIX=$QSIM_PREFIX"
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\$QSIM_PREFIX/lib"
+
 
 # clone qemu
 echo "Cloning qemu..."
@@ -48,20 +52,22 @@ cd ..
 # capstone disassembler
 git clone https://github.com/pranith/capstone
 cd capstone
-git checkout -b armport origin/armport
+git checkout -b arm64_reg_access origin/armport
 ./make.sh
-./copy.sh
+cp include/capston/*.h $QSIM_PREFIX/include/
+cp libcapstone.so $QSIM_PREFIX/lib/
 cd ..
 
 # get qemu images
 echo "\nDownloading arm QEMU images..."
 # wget https://www.dropbox.com/s/wtie9kghc95em7o/qsim_arm_images.tar.bz2?dl=0
 # wget https://www.dropbox.com/s/ekglfaqogewrojl/arm_images.tar.bz2?dl=0 -O arm_images.tar.bz2
-wget https://www.dropbox.com/s/u7mk3x37tg65vwb/arm64_images.tar.bz2?dl=0 -O arm64_images.tar.bz2
+# wget https://www.dropbox.com/s/u7mk3x37tg65vwb/arm64_images.tar.bz2?dl=0 -O arm64_images.tar.bz2
+wget https://www.dropbox.com/s/2jplu61410tfime/arm64_images.tar.xz?dl=0 -O arm64_images.tar.xz
 # cp ~/devops/Dropbox/qsim-ARM/arm_images.tar.bz2 .
 
 echo "\nUncompresssing images. This might take a while..."
-tar -xjvf arm_images.tar.bz2
+tar -xjvf arm64_images.tar.xz
 # tar -xvf arm_images.tar
 
 # run simple example
