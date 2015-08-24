@@ -55,7 +55,7 @@ cd ..
 # capstone disassembler
 git clone https://github.com/pranith/capstone
 cd capstone
-git checkout -b arm64_reg_access origin/armport
+git checkout -b arm64_reg_access origin/arm64_reg_access
 ./make.sh
 cp include/capstone/*.h $QSIM_PREFIX/include/
 cp libcapstone.so $QSIM_PREFIX/lib/
