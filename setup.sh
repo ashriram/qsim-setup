@@ -12,8 +12,8 @@ echo "sudo apt-get -y build-dep qemu"
 echo "Cloning qsim..."
 git clone https://github.com/pranith/qsim
 cd qsim
-# use branch armport
-git checkout -b armport origin/armport
+# use branch v2.0
+git checkout -b v2.0-ARM64 v2.0-ARM64
 
 # set the QSIM environment variable
 echo "Setting QSIM environment variable..."
@@ -28,8 +28,8 @@ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\$QSIM_PREFIX/lib"
 echo "Cloning qemu..."
 git clone https://github.com/pranith/qemu
 cd qemu
-# use branch armport
-git checkout -b armport origin/armport
+# use branch v2.0
+git checkout -b v2.0-ARM64 v2.0-ARM64
 cd ..
 
 # create lib, include, build directories
