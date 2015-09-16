@@ -43,7 +43,7 @@ cp *.h include/
 # build qemu
 echo "\nConfiguring and building qemu...\n"
 cd build
-../arm64-build.sh
+../arm64-build.sh release
 
 # copy built libraries
 cd ..
