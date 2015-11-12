@@ -25,6 +25,7 @@ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\$QSIM_PREFIX/lib"
 
 # build qemu
 echo "\nConfiguring and building qemu...\n"
+mkdir build
 cd build
 ../arm64-build.sh release
 
