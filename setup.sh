@@ -13,7 +13,7 @@ echo "Cloning qsim..."
 git clone --recursive https://github.com/pranith/qsim
 cd qsim
 # use branch v2.0
-git checkout -b v2.1-qsim v2.1-qsim
+git checkout -b v2.1.1-qsim v2.1.1-qsim
 
 # set the QSIM environment variable
 echo "Setting QSIM environment variable..."
@@ -33,15 +33,6 @@ cd build
 make -j4
 # copy header files to include directory
 make install
-
-# capstone disassembler
-git clone https://github.com/pranith/capstone
-cd capstone
-git checkout -b arm64_reg_access origin/arm64_reg_access
-./make.sh
-cp include/capstone/*.h $QSIM_PREFIX/include/
-cp libcapstone.so $QSIM_PREFIX/lib/
-cd ../..
 
 # get qemu images
 echo "\nDownloading arm QEMU images..."
